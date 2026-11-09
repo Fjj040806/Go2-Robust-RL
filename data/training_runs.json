@@ -1,0 +1,878 @@
+[
+  {
+    "protocol": "go2-factorial-v1-pilot",
+    "group": "A",
+    "curriculum": false,
+    "randomization": false,
+    "trainer_steps": 60000,
+    "seed": 7,
+    "num_envs": 2048,
+    "command_lower": [
+      -0.5,
+      -0.5,
+      -0.5
+    ],
+    "command_upper": [
+      1.2,
+      0.5,
+      0.5
+    ],
+    "curriculum_stages_progress_scale": [
+      [
+        0.0,
+        0.25
+      ],
+      [
+        0.2,
+        0.5
+      ],
+      [
+        0.5,
+        0.75
+      ],
+      [
+        0.8,
+        1.0
+      ]
+    ],
+    "curriculum_type": "Time-scheduled command-range expansion; not performance-adaptive.",
+    "randomization_scope": "Only friction, base-link mass, actuator Kp and damping.",
+    "shared_observation_noise": "Upstream NoiseConfig unchanged in all four groups.",
+    "standing_probability": 0.1,
+    "command_resampling_seconds": [
+      5.0,
+      10.0
+    ],
+    "reward": "Unchanged upstream Go2 reward.",
+    "status": "completed",
+    "source_hashes": {
+      "task": "1f7dfc1a134de22ccc572136512e6793068abbc398fd6dd30ba1437c10c86a95",
+      "go2": "9f03cdf532b005d5c76cbd4cf9a79e2309a5c80ca32b73a6287f73e1822b4ec4"
+    },
+    "packages": {
+      "motrixlab": "0.4.0",
+      "motrixsim": "0.10.1",
+      "motrix-envs": "0.4.0",
+      "motrix-rl-skrl": "0.4.0",
+      "skrl": "2.1.0",
+      "torch": "2.7.0+cu128"
+    },
+    "launcher_sha256": "1e43b268919db73ae572dbad8a0bb2f6173840d191c83c5e1b052006748cbddc",
+    "spec_sha256": "f3b5bb09728524d8585cf7298cf7da7aa285b010346fb6764c60ce4c8ab687fb",
+    "runtime_randomization_switches": {
+      "kp": false,
+      "damping": false,
+      "friction": false,
+      "mass": false
+    },
+    "num_actions": 12,
+    "policy_obs_dim": 49,
+    "value_obs_dim": 52,
+    "ctrl_dt_s": 0.02,
+    "observed_environment_control_steps": 60000,
+    "checkpoint_sha256": "c9012a713087333b076f20520f0a31a7d868ee82702b0b555aa2be0f9efde72f"
+  },
+  {
+    "protocol": "go2-factorial-v1-pilot",
+    "group": "A",
+    "curriculum": false,
+    "randomization": false,
+    "trainer_steps": 60000,
+    "seed": 17,
+    "num_envs": 2048,
+    "command_lower": [
+      -0.5,
+      -0.5,
+      -0.5
+    ],
+    "command_upper": [
+      1.2,
+      0.5,
+      0.5
+    ],
+    "curriculum_stages_progress_scale": [
+      [
+        0.0,
+        0.25
+      ],
+      [
+        0.2,
+        0.5
+      ],
+      [
+        0.5,
+        0.75
+      ],
+      [
+        0.8,
+        1.0
+      ]
+    ],
+    "curriculum_type": "Time-scheduled command-range expansion; not performance-adaptive.",
+    "randomization_scope": "Only friction, base-link mass, actuator Kp and damping.",
+    "shared_observation_noise": "Upstream NoiseConfig unchanged in all four groups.",
+    "standing_probability": 0.1,
+    "command_resampling_seconds": [
+      5.0,
+      10.0
+    ],
+    "reward": "Unchanged upstream Go2 reward.",
+    "status": "completed",
+    "source_hashes": {
+      "task": "1f7dfc1a134de22ccc572136512e6793068abbc398fd6dd30ba1437c10c86a95",
+      "go2": "9f03cdf532b005d5c76cbd4cf9a79e2309a5c80ca32b73a6287f73e1822b4ec4"
+    },
+    "packages": {
+      "motrixlab": "0.4.0",
+      "motrixsim": "0.10.1",
+      "motrix-envs": "0.4.0",
+      "motrix-rl-skrl": "0.4.0",
+      "skrl": "2.1.0",
+      "torch": "2.7.0+cu128"
+    },
+    "launcher_sha256": "1e43b268919db73ae572dbad8a0bb2f6173840d191c83c5e1b052006748cbddc",
+    "spec_sha256": "f3b5bb09728524d8585cf7298cf7da7aa285b010346fb6764c60ce4c8ab687fb",
+    "runtime_randomization_switches": {
+      "kp": false,
+      "damping": false,
+      "friction": false,
+      "mass": false
+    },
+    "num_actions": 12,
+    "policy_obs_dim": 49,
+    "value_obs_dim": 52,
+    "ctrl_dt_s": 0.02,
+    "observed_environment_control_steps": 60000,
+    "checkpoint_sha256": "bb44d48cd647f8370c2d9e861edd097bfc58d7a07554e07cdf50eafb4f73c1b9"
+  },
+  {
+    "protocol": "go2-factorial-v1-pilot",
+    "group": "A",
+    "curriculum": false,
+    "randomization": false,
+    "trainer_steps": 60000,
+    "seed": 27,
+    "num_envs": 2048,
+    "command_lower": [
+      -0.5,
+      -0.5,
+      -0.5
+    ],
+    "command_upper": [
+      1.2,
+      0.5,
+      0.5
+    ],
+    "curriculum_stages_progress_scale": [
+      [
+        0.0,
+        0.25
+      ],
+      [
+        0.2,
+        0.5
+      ],
+      [
+        0.5,
+        0.75
+      ],
+      [
+        0.8,
+        1.0
+      ]
+    ],
+    "curriculum_type": "Time-scheduled command-range expansion; not performance-adaptive.",
+    "randomization_scope": "Only friction, base-link mass, actuator Kp and damping.",
+    "shared_observation_noise": "Upstream NoiseConfig unchanged in all four groups.",
+    "standing_probability": 0.1,
+    "command_resampling_seconds": [
+      5.0,
+      10.0
+    ],
+    "reward": "Unchanged upstream Go2 reward.",
+    "status": "completed",
+    "source_hashes": {
+      "task": "1f7dfc1a134de22ccc572136512e6793068abbc398fd6dd30ba1437c10c86a95",
+      "go2": "9f03cdf532b005d5c76cbd4cf9a79e2309a5c80ca32b73a6287f73e1822b4ec4"
+    },
+    "packages": {
+      "motrixlab": "0.4.0",
+      "motrixsim": "0.10.1",
+      "motrix-envs": "0.4.0",
+      "motrix-rl-skrl": "0.4.0",
+      "skrl": "2.1.0",
+      "torch": "2.7.0+cu128"
+    },
+    "launcher_sha256": "1e43b268919db73ae572dbad8a0bb2f6173840d191c83c5e1b052006748cbddc",
+    "spec_sha256": "f3b5bb09728524d8585cf7298cf7da7aa285b010346fb6764c60ce4c8ab687fb",
+    "runtime_randomization_switches": {
+      "kp": false,
+      "damping": false,
+      "friction": false,
+      "mass": false
+    },
+    "num_actions": 12,
+    "policy_obs_dim": 49,
+    "value_obs_dim": 52,
+    "ctrl_dt_s": 0.02,
+    "observed_environment_control_steps": 60000,
+    "checkpoint_sha256": "5f472f87939160e5b49d77f6ba7b678546922f8ef7a591c0b6e2845932f9a829"
+  },
+  {
+    "protocol": "go2-factorial-v1-pilot",
+    "group": "B",
+    "curriculum": true,
+    "randomization": false,
+    "trainer_steps": 60000,
+    "seed": 7,
+    "num_envs": 2048,
+    "command_lower": [
+      -0.5,
+      -0.5,
+      -0.5
+    ],
+    "command_upper": [
+      1.2,
+      0.5,
+      0.5
+    ],
+    "curriculum_stages_progress_scale": [
+      [
+        0.0,
+        0.25
+      ],
+      [
+        0.2,
+        0.5
+      ],
+      [
+        0.5,
+        0.75
+      ],
+      [
+        0.8,
+        1.0
+      ]
+    ],
+    "curriculum_type": "Time-scheduled command-range expansion; not performance-adaptive.",
+    "randomization_scope": "Only friction, base-link mass, actuator Kp and damping.",
+    "shared_observation_noise": "Upstream NoiseConfig unchanged in all four groups.",
+    "standing_probability": 0.1,
+    "command_resampling_seconds": [
+      5.0,
+      10.0
+    ],
+    "reward": "Unchanged upstream Go2 reward.",
+    "status": "completed",
+    "source_hashes": {
+      "task": "1f7dfc1a134de22ccc572136512e6793068abbc398fd6dd30ba1437c10c86a95",
+      "go2": "9f03cdf532b005d5c76cbd4cf9a79e2309a5c80ca32b73a6287f73e1822b4ec4"
+    },
+    "packages": {
+      "motrixlab": "0.4.0",
+      "motrixsim": "0.10.1",
+      "motrix-envs": "0.4.0",
+      "motrix-rl-skrl": "0.4.0",
+      "skrl": "2.1.0",
+      "torch": "2.7.0+cu128"
+    },
+    "launcher_sha256": "1e43b268919db73ae572dbad8a0bb2f6173840d191c83c5e1b052006748cbddc",
+    "spec_sha256": "f3b5bb09728524d8585cf7298cf7da7aa285b010346fb6764c60ce4c8ab687fb",
+    "runtime_randomization_switches": {
+      "kp": false,
+      "damping": false,
+      "friction": false,
+      "mass": false
+    },
+    "num_actions": 12,
+    "policy_obs_dim": 49,
+    "value_obs_dim": 52,
+    "ctrl_dt_s": 0.02,
+    "observed_environment_control_steps": 60000,
+    "checkpoint_sha256": "2ce907f7c06c6ee1b2dea68cd82d0dc27fed6942bfd47a690d41241dd2e9bf18"
+  },
+  {
+    "protocol": "go2-factorial-v1-pilot",
+    "group": "B",
+    "curriculum": true,
+    "randomization": false,
+    "trainer_steps": 60000,
+    "seed": 17,
+    "num_envs": 2048,
+    "command_lower": [
+      -0.5,
+      -0.5,
+      -0.5
+    ],
+    "command_upper": [
+      1.2,
+      0.5,
+      0.5
+    ],
+    "curriculum_stages_progress_scale": [
+      [
+        0.0,
+        0.25
+      ],
+      [
+        0.2,
+        0.5
+      ],
+      [
+        0.5,
+        0.75
+      ],
+      [
+        0.8,
+        1.0
+      ]
+    ],
+    "curriculum_type": "Time-scheduled command-range expansion; not performance-adaptive.",
+    "randomization_scope": "Only friction, base-link mass, actuator Kp and damping.",
+    "shared_observation_noise": "Upstream NoiseConfig unchanged in all four groups.",
+    "standing_probability": 0.1,
+    "command_resampling_seconds": [
+      5.0,
+      10.0
+    ],
+    "reward": "Unchanged upstream Go2 reward.",
+    "status": "completed",
+    "source_hashes": {
+      "task": "1f7dfc1a134de22ccc572136512e6793068abbc398fd6dd30ba1437c10c86a95",
+      "go2": "9f03cdf532b005d5c76cbd4cf9a79e2309a5c80ca32b73a6287f73e1822b4ec4"
+    },
+    "packages": {
+      "motrixlab": "0.4.0",
+      "motrixsim": "0.10.1",
+      "motrix-envs": "0.4.0",
+      "motrix-rl-skrl": "0.4.0",
+      "skrl": "2.1.0",
+      "torch": "2.7.0+cu128"
+    },
+    "launcher_sha256": "1e43b268919db73ae572dbad8a0bb2f6173840d191c83c5e1b052006748cbddc",
+    "spec_sha256": "f3b5bb09728524d8585cf7298cf7da7aa285b010346fb6764c60ce4c8ab687fb",
+    "runtime_randomization_switches": {
+      "kp": false,
+      "damping": false,
+      "friction": false,
+      "mass": false
+    },
+    "num_actions": 12,
+    "policy_obs_dim": 49,
+    "value_obs_dim": 52,
+    "ctrl_dt_s": 0.02,
+    "observed_environment_control_steps": 60000,
+    "checkpoint_sha256": "9a43aef23d4c27d24f7e5a1261a7a0acb23ddd127522b15e6b618e42feab9275"
+  },
+  {
+    "protocol": "go2-factorial-v1-pilot",
+    "group": "B",
+    "curriculum": true,
+    "randomization": false,
+    "trainer_steps": 60000,
+    "seed": 27,
+    "num_envs": 2048,
+    "command_lower": [
+      -0.5,
+      -0.5,
+      -0.5
+    ],
+    "command_upper": [
+      1.2,
+      0.5,
+      0.5
+    ],
+    "curriculum_stages_progress_scale": [
+      [
+        0.0,
+        0.25
+      ],
+      [
+        0.2,
+        0.5
+      ],
+      [
+        0.5,
+        0.75
+      ],
+      [
+        0.8,
+        1.0
+      ]
+    ],
+    "curriculum_type": "Time-scheduled command-range expansion; not performance-adaptive.",
+    "randomization_scope": "Only friction, base-link mass, actuator Kp and damping.",
+    "shared_observation_noise": "Upstream NoiseConfig unchanged in all four groups.",
+    "standing_probability": 0.1,
+    "command_resampling_seconds": [
+      5.0,
+      10.0
+    ],
+    "reward": "Unchanged upstream Go2 reward.",
+    "status": "completed",
+    "source_hashes": {
+      "task": "1f7dfc1a134de22ccc572136512e6793068abbc398fd6dd30ba1437c10c86a95",
+      "go2": "9f03cdf532b005d5c76cbd4cf9a79e2309a5c80ca32b73a6287f73e1822b4ec4"
+    },
+    "packages": {
+      "motrixlab": "0.4.0",
+      "motrixsim": "0.10.1",
+      "motrix-envs": "0.4.0",
+      "motrix-rl-skrl": "0.4.0",
+      "skrl": "2.1.0",
+      "torch": "2.7.0+cu128"
+    },
+    "launcher_sha256": "1e43b268919db73ae572dbad8a0bb2f6173840d191c83c5e1b052006748cbddc",
+    "spec_sha256": "f3b5bb09728524d8585cf7298cf7da7aa285b010346fb6764c60ce4c8ab687fb",
+    "runtime_randomization_switches": {
+      "kp": false,
+      "damping": false,
+      "friction": false,
+      "mass": false
+    },
+    "num_actions": 12,
+    "policy_obs_dim": 49,
+    "value_obs_dim": 52,
+    "ctrl_dt_s": 0.02,
+    "observed_environment_control_steps": 60000,
+    "checkpoint_sha256": "51a9d2ccea37ffffbef00d1f318fd0044d8648865f113d38711c71768ecc818f"
+  },
+  {
+    "protocol": "go2-factorial-v1-pilot",
+    "group": "C",
+    "curriculum": false,
+    "randomization": true,
+    "trainer_steps": 60000,
+    "seed": 7,
+    "num_envs": 2048,
+    "command_lower": [
+      -0.5,
+      -0.5,
+      -0.5
+    ],
+    "command_upper": [
+      1.2,
+      0.5,
+      0.5
+    ],
+    "curriculum_stages_progress_scale": [
+      [
+        0.0,
+        0.25
+      ],
+      [
+        0.2,
+        0.5
+      ],
+      [
+        0.5,
+        0.75
+      ],
+      [
+        0.8,
+        1.0
+      ]
+    ],
+    "curriculum_type": "Time-scheduled command-range expansion; not performance-adaptive.",
+    "randomization_scope": "Only friction, base-link mass, actuator Kp and damping.",
+    "shared_observation_noise": "Upstream NoiseConfig unchanged in all four groups.",
+    "standing_probability": 0.1,
+    "command_resampling_seconds": [
+      5.0,
+      10.0
+    ],
+    "reward": "Unchanged upstream Go2 reward.",
+    "status": "completed",
+    "source_hashes": {
+      "task": "1f7dfc1a134de22ccc572136512e6793068abbc398fd6dd30ba1437c10c86a95",
+      "go2": "9f03cdf532b005d5c76cbd4cf9a79e2309a5c80ca32b73a6287f73e1822b4ec4"
+    },
+    "packages": {
+      "motrixlab": "0.4.0",
+      "motrixsim": "0.10.1",
+      "motrix-envs": "0.4.0",
+      "motrix-rl-skrl": "0.4.0",
+      "skrl": "2.1.0",
+      "torch": "2.7.0+cu128"
+    },
+    "launcher_sha256": "1e43b268919db73ae572dbad8a0bb2f6173840d191c83c5e1b052006748cbddc",
+    "spec_sha256": "f3b5bb09728524d8585cf7298cf7da7aa285b010346fb6764c60ce4c8ab687fb",
+    "runtime_randomization_switches": {
+      "kp": true,
+      "damping": true,
+      "friction": true,
+      "mass": true
+    },
+    "num_actions": 12,
+    "policy_obs_dim": 49,
+    "value_obs_dim": 52,
+    "ctrl_dt_s": 0.02,
+    "observed_environment_control_steps": 60000,
+    "checkpoint_sha256": "83d302097c634422274fd5121d4d3c0e336c685fcfbf8e0cbb33065309cba35a"
+  },
+  {
+    "protocol": "go2-factorial-v1-pilot",
+    "group": "C",
+    "curriculum": false,
+    "randomization": true,
+    "trainer_steps": 60000,
+    "seed": 17,
+    "num_envs": 2048,
+    "command_lower": [
+      -0.5,
+      -0.5,
+      -0.5
+    ],
+    "command_upper": [
+      1.2,
+      0.5,
+      0.5
+    ],
+    "curriculum_stages_progress_scale": [
+      [
+        0.0,
+        0.25
+      ],
+      [
+        0.2,
+        0.5
+      ],
+      [
+        0.5,
+        0.75
+      ],
+      [
+        0.8,
+        1.0
+      ]
+    ],
+    "curriculum_type": "Time-scheduled command-range expansion; not performance-adaptive.",
+    "randomization_scope": "Only friction, base-link mass, actuator Kp and damping.",
+    "shared_observation_noise": "Upstream NoiseConfig unchanged in all four groups.",
+    "standing_probability": 0.1,
+    "command_resampling_seconds": [
+      5.0,
+      10.0
+    ],
+    "reward": "Unchanged upstream Go2 reward.",
+    "status": "completed",
+    "source_hashes": {
+      "task": "1f7dfc1a134de22ccc572136512e6793068abbc398fd6dd30ba1437c10c86a95",
+      "go2": "9f03cdf532b005d5c76cbd4cf9a79e2309a5c80ca32b73a6287f73e1822b4ec4"
+    },
+    "packages": {
+      "motrixlab": "0.4.0",
+      "motrixsim": "0.10.1",
+      "motrix-envs": "0.4.0",
+      "motrix-rl-skrl": "0.4.0",
+      "skrl": "2.1.0",
+      "torch": "2.7.0+cu128"
+    },
+    "launcher_sha256": "1e43b268919db73ae572dbad8a0bb2f6173840d191c83c5e1b052006748cbddc",
+    "spec_sha256": "f3b5bb09728524d8585cf7298cf7da7aa285b010346fb6764c60ce4c8ab687fb",
+    "runtime_randomization_switches": {
+      "kp": true,
+      "damping": true,
+      "friction": true,
+      "mass": true
+    },
+    "num_actions": 12,
+    "policy_obs_dim": 49,
+    "value_obs_dim": 52,
+    "ctrl_dt_s": 0.02,
+    "observed_environment_control_steps": 60000,
+    "checkpoint_sha256": "e4f55c09060e51c2f67262ddd077c2876dbcb2bd53267ad45eb3a80448f02ac2"
+  },
+  {
+    "protocol": "go2-factorial-v1-pilot",
+    "group": "C",
+    "curriculum": false,
+    "randomization": true,
+    "trainer_steps": 60000,
+    "seed": 27,
+    "num_envs": 2048,
+    "command_lower": [
+      -0.5,
+      -0.5,
+      -0.5
+    ],
+    "command_upper": [
+      1.2,
+      0.5,
+      0.5
+    ],
+    "curriculum_stages_progress_scale": [
+      [
+        0.0,
+        0.25
+      ],
+      [
+        0.2,
+        0.5
+      ],
+      [
+        0.5,
+        0.75
+      ],
+      [
+        0.8,
+        1.0
+      ]
+    ],
+    "curriculum_type": "Time-scheduled command-range expansion; not performance-adaptive.",
+    "randomization_scope": "Only friction, base-link mass, actuator Kp and damping.",
+    "shared_observation_noise": "Upstream NoiseConfig unchanged in all four groups.",
+    "standing_probability": 0.1,
+    "command_resampling_seconds": [
+      5.0,
+      10.0
+    ],
+    "reward": "Unchanged upstream Go2 reward.",
+    "status": "completed",
+    "source_hashes": {
+      "task": "1f7dfc1a134de22ccc572136512e6793068abbc398fd6dd30ba1437c10c86a95",
+      "go2": "9f03cdf532b005d5c76cbd4cf9a79e2309a5c80ca32b73a6287f73e1822b4ec4"
+    },
+    "packages": {
+      "motrixlab": "0.4.0",
+      "motrixsim": "0.10.1",
+      "motrix-envs": "0.4.0",
+      "motrix-rl-skrl": "0.4.0",
+      "skrl": "2.1.0",
+      "torch": "2.7.0+cu128"
+    },
+    "launcher_sha256": "1e43b268919db73ae572dbad8a0bb2f6173840d191c83c5e1b052006748cbddc",
+    "spec_sha256": "f3b5bb09728524d8585cf7298cf7da7aa285b010346fb6764c60ce4c8ab687fb",
+    "runtime_randomization_switches": {
+      "kp": true,
+      "damping": true,
+      "friction": true,
+      "mass": true
+    },
+    "num_actions": 12,
+    "policy_obs_dim": 49,
+    "value_obs_dim": 52,
+    "ctrl_dt_s": 0.02,
+    "observed_environment_control_steps": 60000,
+    "checkpoint_sha256": "63e4944d77bf2451d8d73217e7adc7189eab0a85a95364348aa0bec34eceec13"
+  },
+  {
+    "protocol": "go2-factorial-v1-pilot",
+    "group": "D",
+    "curriculum": true,
+    "randomization": true,
+    "trainer_steps": 60000,
+    "seed": 7,
+    "num_envs": 2048,
+    "command_lower": [
+      -0.5,
+      -0.5,
+      -0.5
+    ],
+    "command_upper": [
+      1.2,
+      0.5,
+      0.5
+    ],
+    "curriculum_stages_progress_scale": [
+      [
+        0.0,
+        0.25
+      ],
+      [
+        0.2,
+        0.5
+      ],
+      [
+        0.5,
+        0.75
+      ],
+      [
+        0.8,
+        1.0
+      ]
+    ],
+    "curriculum_type": "Time-scheduled command-range expansion; not performance-adaptive.",
+    "randomization_scope": "Only friction, base-link mass, actuator Kp and damping.",
+    "shared_observation_noise": "Upstream NoiseConfig unchanged in all four groups.",
+    "standing_probability": 0.1,
+    "command_resampling_seconds": [
+      5.0,
+      10.0
+    ],
+    "reward": "Unchanged upstream Go2 reward.",
+    "status": "completed",
+    "source_hashes": {
+      "task": "1f7dfc1a134de22ccc572136512e6793068abbc398fd6dd30ba1437c10c86a95",
+      "go2": "9f03cdf532b005d5c76cbd4cf9a79e2309a5c80ca32b73a6287f73e1822b4ec4"
+    },
+    "packages": {
+      "motrixlab": "0.4.0",
+      "motrixsim": "0.10.1",
+      "motrix-envs": "0.4.0",
+      "motrix-rl-skrl": "0.4.0",
+      "skrl": "2.1.0",
+      "torch": "2.7.0+cu128"
+    },
+    "launcher_sha256": "1e43b268919db73ae572dbad8a0bb2f6173840d191c83c5e1b052006748cbddc",
+    "spec_sha256": "f3b5bb09728524d8585cf7298cf7da7aa285b010346fb6764c60ce4c8ab687fb",
+    "runtime_randomization_switches": {
+      "kp": true,
+      "damping": true,
+      "friction": true,
+      "mass": true
+    },
+    "num_actions": 12,
+    "policy_obs_dim": 49,
+    "value_obs_dim": 52,
+    "ctrl_dt_s": 0.02,
+    "observed_environment_control_steps": 60000,
+    "checkpoint_sha256": "e5301d3bd51bee11f5de395f5349dd6c33f2c5360697a4ae68dac180db90b394"
+  },
+  {
+    "protocol": "go2-factorial-v1-pilot",
+    "group": "D",
+    "curriculum": true,
+    "randomization": true,
+    "trainer_steps": 60000,
+    "seed": 17,
+    "num_envs": 2048,
+    "command_lower": [
+      -0.5,
+      -0.5,
+      -0.5
+    ],
+    "command_upper": [
+      1.2,
+      0.5,
+      0.5
+    ],
+    "curriculum_stages_progress_scale": [
+      [
+        0.0,
+        0.25
+      ],
+      [
+        0.2,
+        0.5
+      ],
+      [
+        0.5,
+        0.75
+      ],
+      [
+        0.8,
+        1.0
+      ]
+    ],
+    "curriculum_type": "Time-scheduled command-range expansion; not performance-adaptive.",
+    "randomization_scope": "Only friction, base-link mass, actuator Kp and damping.",
+    "shared_observation_noise": "Upstream NoiseConfig unchanged in all four groups.",
+    "standing_probability": 0.1,
+    "command_resampling_seconds": [
+      5.0,
+      10.0
+    ],
+    "reward": "Unchanged upstream Go2 reward.",
+    "status": "completed",
+    "source_hashes": {
+      "task": "1f7dfc1a134de22ccc572136512e6793068abbc398fd6dd30ba1437c10c86a95",
+      "go2": "9f03cdf532b005d5c76cbd4cf9a79e2309a5c80ca32b73a6287f73e1822b4ec4"
+    },
+    "packages": {
+      "motrixlab": "0.4.0",
+      "motrixsim": "0.10.1",
+      "motrix-envs": "0.4.0",
+      "motrix-rl-skrl": "0.4.0",
+      "skrl": "2.1.0",
+      "torch": "2.7.0+cu128"
+    },
+    "launcher_sha256": "1e43b268919db73ae572dbad8a0bb2f6173840d191c83c5e1b052006748cbddc",
+    "spec_sha256": "f3b5bb09728524d8585cf7298cf7da7aa285b010346fb6764c60ce4c8ab687fb",
+    "runtime_randomization_switches": {
+      "kp": true,
+      "damping": true,
+      "friction": true,
+      "mass": true
+    },
+    "num_actions": 12,
+    "policy_obs_dim": 49,
+    "value_obs_dim": 52,
+    "ctrl_dt_s": 0.02,
+    "observed_environment_control_steps": 60000,
+    "checkpoint_sha256": "e7c4d97e6c63c9651c343fd15034f925bf49b619ad129a48284035317b841bfc"
+  },
+  {
+    "protocol": "go2-factorial-v1-pilot",
+    "group": "D",
+    "curriculum": true,
+    "randomization": true,
+    "trainer_steps": 60000,
+    "seed": 27,
+    "num_envs": 2048,
+    "command_lower": [
+      -0.5,
+      -0.5,
+      -0.5
+    ],
+    "command_upper": [
+      1.2,
+      0.5,
+      0.5
+    ],
+    "curriculum_stages_progress_scale": [
+      [
+        0.0,
+        0.25
+      ],
+      [
+        0.2,
+        0.5
+      ],
+      [
+        0.5,
+        0.75
+      ],
+      [
+        0.8,
+        1.0
+      ]
+    ],
+    "curriculum_type": "Time-scheduled command-range expansion; not performance-adaptive.",
+    "randomization_scope": "Only friction, base-link mass, actuator Kp and damping.",
+    "shared_observation_noise": "Upstream NoiseConfig unchanged in all four groups.",
+    "standing_probability": 0.1,
+    "command_resampling_seconds": [
+      5.0,
+      10.0
+    ],
+    "reward": "Unchanged upstream Go2 reward.",
+    "status": "completed",
+    "source_hashes": {
+      "task": "1f7dfc1a134de22ccc572136512e6793068abbc398fd6dd30ba1437c10c86a95",
+      "go2": "9f03cdf532b005d5c76cbd4cf9a79e2309a5c80ca32b73a6287f73e1822b4ec4"
+    },
+    "packages": {
+      "motrixlab": "0.4.0",
+      "motrixsim": "0.10.1",
+      "motrix-envs": "0.4.0",
+      "motrix-rl-skrl": "0.4.0",
+      "skrl": "2.1.0",
+      "torch": "2.7.0+cu128"
+    },
+    "launcher_sha256": "1e43b268919db73ae572dbad8a0bb2f6173840d191c83c5e1b052006748cbddc",
+    "spec_sha256": "f3b5bb09728524d8585cf7298cf7da7aa285b010346fb6764c60ce4c8ab687fb",
+    "runtime_randomization_switches": {
+      "kp": true,
+      "damping": true,
+      "friction": true,
+      "mass": true
+    },
+    "num_actions": 12,
+    "policy_obs_dim": 49,
+    "value_obs_dim": 52,
+    "ctrl_dt_s": 0.02,
+    "observed_environment_control_steps": 60000,
+    "checkpoint_sha256": "c30aa12853fe5da1f2bafe63e47c54805d35d7ef65819cec59be0966bfbf4309"
+  }
+]
