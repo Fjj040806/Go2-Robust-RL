@@ -65,4 +65,4 @@ powershell -ExecutionPolicy Bypass -File .\Run_Replay.ps1 -Group D
 
 The launcher downloads the replay dependencies, extracts the model into the expected run layout and verifies its hash. The viewer pauses at the initial pose. Start a Windows screen recording of MotrixRender, then press Enter in the terminal. The rollout uses the original deterministic action selection, evaluation seed 101 and +60 N pulse at 3.0 s for 0.20 s. It presents simulator states before automatic reset, including the first fall frame, and pauses at completion for recording to finish. Both runs start with the same camera settings. Each run also writes fresh CSV telemetry to its printed output folder for comparison with the original data.
 
-The viewer addition has passed Python compilation and source checks. GPU rendering and the PowerShell launcher require validation on the training Windows machine.
+The Windows replay workflow produced the two uploaded MotrixRender screen recordings used in the published 3D comparison. The uploaded seed-7 A and D checkpoint hashes match the original training audits. Checkpoint binaries remain outside this repository.

@@ -15,7 +15,15 @@ I trained twelve PPO policies for the 12-DoF Unitree Go2 in MotrixLab, using 2,0
 
 Tracking values are mean ± sample SD across three training seeds and five forward commands from 0.2 to 1.2 m/s. A had the lowest mean error and the highest recovery count in both push protocols under the tested conditions. All policies completed the nominal suite, and all policies fell under both signs of the 80 N push.
 
-## Push comparison
+## 3D push comparison
+
+[![Go2 3D comparison of fixed training and curriculum with randomization](media/go2_3d_comparison.jpg)](media/go2_3d_comparison.mp4)
+
+[Watch the 3D comparison (MP4)](media/go2_3d_comparison.mp4). Captured from MotrixRender on the training Windows machine using the verified seed-7 A and D checkpoints. Both replays use the +60 N world-Y pulse at 3.0 s for 0.20 s while commanding 0.5 m/s forward velocity.
+
+The independently recorded clips are trimmed and aligned by visible motion onset. They retain their recorded playback speed. The D panel holds its final fall frame until A finishes. The camera framing differs between recordings and A includes a late camera adjustment. The source recordings contain no simulator timestamp, so precise recovery latency and fall timing are reported from telemetry below.
+
+## Telemetry comparison
 
 ![Recorded lateral velocity and body orientation for A and D](media/push_comparison.png)
 
