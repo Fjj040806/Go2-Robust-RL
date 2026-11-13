@@ -53,3 +53,16 @@ python scripts/animate.py
 ```
 
 The episode table retains command, push amplitude and onset, first fall, recovery latency and planar tracking error. Blank fields indicate an inapplicable condition or an event that did not occur. The importer reconstructs this table and verifies the force schedule from the original study archives when supplied as a directory argument. The two example CSVs are the full control traces for the selected matched comparison.
+
+## Record the matched 3D comparison
+
+The two uploaded seed-7 model ZIPs have been checked against the original checkpoint hashes. Place them in Downloads as `Go2_A_seed7_checkpoint.zip` and `Go2_D_seed7_checkpoint.zip`. From a local copy of this repository, run the launcher once per group.
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\Run_Replay.ps1 -Group A
+powershell -ExecutionPolicy Bypass -File .\Run_Replay.ps1 -Group D
+```
+
+The launcher downloads the replay dependencies, extracts the model into the expected run layout and verifies its hash. The viewer pauses at the initial pose. Start a Windows screen recording of MotrixRender, then press Enter in the terminal. The rollout uses the original deterministic action selection, evaluation seed 101 and +60 N pulse at 3.0 s for 0.20 s. It presents simulator states before automatic reset, including the first fall frame, and pauses at completion for recording to finish. Both runs start with the same camera settings. Each run also writes fresh CSV telemetry to its printed output folder for comparison with the original data.
+
+The viewer addition has passed Python compilation and source checks. GPU rendering and the PowerShell launcher require validation on the training Windows machine.

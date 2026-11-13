@@ -3,6 +3,7 @@ Uses the installed CLI to restore the exact saved policy and preprocessors.
 No source files are edited. Private task hooks are version-sensitive.
 """
 import argparse
+import time
 from audit_policy import verify_policy
 import csv
 import hashlib
@@ -76,6 +77,8 @@ def main():
     parser.add_argument('--group', choices=['A', 'B', 'C', 'D'], required=True)
     parser.add_argument('--training-seed', type=int, choices=(7, 17, 27),
                         help='Verify an original study checkpoint against the published audit')
+    parser.add_argument('--viewer', action='store_true',
+                        help='Show only the matched +60 N rollout at real-time speed')
     args = parser.parse_args()
     policy = args.policy.resolve()
     if not policy.is_file():
@@ -105,6 +108,8 @@ def main():
 
     forces = {f"push_{f:+d}N": f for f in (0, 40, -40, 60, -60, 80, -80)}
     scenarios = [(name, (.5, 0., 0.)) for name in forces]
+    if args.viewer:
+        scenarios = [('push_+60N', (.5, 0., 0.))]
     report = {'protocol': 'push-paired-pilot-v1', 'group': args.group, 'training_command_upper_vx': 1.2, 'status': 'running',
               'policy_sha256': sha256(policy), 'eval_seed': args.seed,
               'quick_interface_test': args.quick,
@@ -131,6 +136,7 @@ def main():
             self._set_seed(args.seed)
             raw = self._make_env(num_envs=1, mode='play')
             env = None
+            renderer = None
             try:
                 if not all(hasattr(raw, k) for k in ['resample_commands', 'compute_transition',
                     'get_local_linvel', 'get_gyro', 'get_gravity', 'sim_data']):
@@ -184,6 +190,8 @@ def main():
                     capture['up'] = np.asarray(raw.get_gravity()).copy()
                     capture['pos'] = np.asarray(raw.sim_data['base_pos']).copy()
                     capture['terminated'] = np.asarray(result.terminated).copy()
+                    if renderer is not None:
+                        renderer.render()
                     return result
 
                 raw.compute_transition = measured_transition
@@ -200,6 +208,14 @@ def main():
                     model.eval()
                 obs, _ = env.reset()
                 state = env.state()
+                if args.viewer:
+                    from motrix_env_core.sim.backend import RenderConfig
+                    renderer = raw.create_renderer(RenderConfig(
+                        camera_lookat=(1.7, 0., .3), camera_distance=5.,
+                        camera_elevation=-20., camera_azimuth=135.))
+                    renderer.render()
+                    input('Position the camera, start screen recording, then press Enter here to begin...')
+                started = time.perf_counter()
                 with (args.output / (name + '.csv')).open('w', newline='', encoding='utf-8') as f:
                     writer = csv.writer(f)
                     writer.writerow(['step','time_s','cmd_vx','cmd_vy','cmd_wz','vx','vy','wz',
@@ -224,6 +240,8 @@ def main():
                                            float(up[2]), command, done)
                             writer.writerow([step+1,t,*cmd,float(v[0]),float(v[1]),float(w[2]),
                                              float(p[2]),float(up[2]),done,initial])
+                            if renderer is not None:
+                                time.sleep(max(0., started + (step + 1) * dt - time.perf_counter()))
                             if tracker.fallen:
                                 break
                 row = {'name': name, 'command': list(cmd), 'ctrl_dt_s': dt,
@@ -241,7 +259,11 @@ def main():
                 report['scenarios'].append(row)
                 save()
                 print(json.dumps(row), flush=True)
+                if renderer is not None:
+                    input('Replay finished. Stop screen recording, then press Enter to close...')
             finally:
+                if renderer is not None:
+                    renderer.close()
                 if env is not None:
                     env.close()
                 else:
